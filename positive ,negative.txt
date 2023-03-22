@@ -1,0 +1,18 @@
+positive  alert
+
+1. To verify the alert is display
+
+2.To verify the alert is give sound
+3.To verify the alert button working
+4.to verify the alert is hidden
+
+
+
+negative alert
+
+
+1. To verify the alert is display or not
+
+2.To verify the alert is give sound  is not working
+3.To verify the alert button working is not working
+4.to verify the alert is hidden is not hidden

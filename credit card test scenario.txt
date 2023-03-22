@@ -1,0 +1,10 @@
+test scenario crdit card
+
+1.to verify the credit card size 
+2.to verift the credit card weight
+3. to verify the credit card digit of number
+4.to verify the credit card colour
+5.to verify the credit card expiry date 
+6. to verify the credit card valid date
+7.to verify the credit card pin
+8.to verify the credit card damage

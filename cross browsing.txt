@@ -1,0 +1,63 @@
+package test;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+public class TestScript {
+WebDriver driver;
+
+
+public void create(String browser) throws Exception{
+
+if(browser.equalsIgnoreCase("firefox")){
+System.setProperty("webdriver.chrome.driver", "D:chromedriver.exe");
+WebDriver driver = new ChromeDriver();
+
+}
+
+else if(browser.equalsIgnoreCase("chrome")){
+
+System.setProperty("Add the path to chrome driver");
+driver = new ChromeDriver();
+}
+else if(browser.equalsIgnoreCase("Edge")){
+
+System.setProperty("Add the path to edge driver”);
+driver = new EdgeDriver();
+}
+else{
+
+throw new Exception("Invalid browser");
+}
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+}
+
+public void testParameterWithXML() throws InterruptedException{
+driver.get("https://www.testsigma.com");
+WebElement Signin = driver.findElement(By.linkText("Login"));
+
+Signin.click();
+Thread.sleep(4000);
+WebElement uname = driver.findElement(By.id("loginUsername"));
+
+uname.sendKeys("your email id");
+Thread.sleep(4000);
+WebElement pwd = driver.findElement(By.name("password"));
+
+pwd.sendKeys("your password");
+Thread.sleep(6000); 
+WebElement  = driver.findElement(By.linkText("SIGN IN));
+
+Next.click();
+}
+
+public void quit(){
+driver.close();
+}
+}
